@@ -2,7 +2,7 @@ let monthBudget = +prompt("Ваш бюджет на месяц", "50000");
 let shopName = prompt("Название вашего магазина", "FunnyShop");
 let time = 19;
 
-mainList = {
+let mainList = {
     monthBudget,
     shopName,
     shopGoods: [],
@@ -16,7 +16,7 @@ for (let i = 0; i < 5; i++) {
         console.log('All is okey');
         mainList.shopGoods[i] = a;
     } else {
-        console.log('Некорректный тип данных');
+        console.log('Пожалуйста, введи данные в строчно-буквенном формате');
     }
 };
 

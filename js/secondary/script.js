@@ -1,4 +1,4 @@
-/*week = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
+week = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
 let date = new Date();
 
 function getWeekDay(date){
@@ -67,7 +67,7 @@ for (let i = 0; i < week.length; i++) {
 
 
 
-*/
+
 
 arr = [ '222', '3353453', '345235', '325352', '74354', '6432', '6532'];
 
