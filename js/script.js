@@ -18,7 +18,8 @@ for (let i = 0; i < 5; i++) {
         console.log('All is okey');
         mainList.shopGoods[i] = a;
     }  else {
-        console.log('Пожалуйста, введи данные в строчно-буквенном формате');
+        alert('Вы не ввели тип товара');
+        i--;
     }
 }
 
