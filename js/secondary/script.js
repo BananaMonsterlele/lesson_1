@@ -1,26 +1,32 @@
-week = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
+/*week = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ];
+let date = new Date();
 
-// console.log(week[0], 
-//     week[1], 
-//     week[2], 
-//     week[3]);
+function getWeekDay(date){
+            switch (date.getDay()){
+                case 0: return 'Sunday'
+                break;
+                case 1: return 'Monday'
+                break;
+                case 2: return 'Tuesday'
+                break;
+                case 3: return 'Wednesday'
+                break;
+                case 4: return 'Thursday'
+                break;
+                case 5: return 'Friday'
+                    break;
+                case 6: return 'Saturday'
+                    break;
+                default: return '0'
+                	break;
+            };
+        };
 
-// document.write(week[0] + '<br>' + week[1]);
-// var o = document.createElement('div')
-// o.innerHTML = week;
-// document.getElementById('test').appendChild(o)    
-
-// for (let i = 0; i < 7; i++) {
-//     alert(week[i]);
-// }
-let x = 1
 for (let i = 0; i < week.length; i++) {
     if (i == 5 || i == 6) {
     	document.write('<strong>' + week[i] + '</strong>' + '<br>' + '<br>');
-    } else if (x < 2) {
-    	let dayOfWeek = +prompt('Какой сегодня день недели по счету?', 1) - 1;
-    	document.write('<em>' + week[dayOfWeek] + '</em>');
-    	x++
+    } else if (i == date.getDay() - 1) {
+    	document.write('<em>' + getWeekDay(date) + '</em>');
     	}
 		else {
 			document.write('<p>' + week[i] + '</p>');
@@ -31,24 +37,45 @@ for (let i = 0; i < week.length; i++) {
 
 
 
-// arr = [];
-// for (let i; i < 7; i++) {
-// 	arr[i] = Math.random();
-// 	console.log(arr[i]);
-// }
 
 
 
 
 
-// switch (arr.number) {
-// 	case '7*':
-// 		console.log('me');
-// 		break;
-// 	case '3*':
-// 		console.log('me');
-// 		break;	
-// 	default:
-// 		console.log('sosat')
-// 		break;
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+arr = [ '222', '3353453', '345235', '325352', '74354', '6432', '6532'];
+
+for (let i = 0; i < 7; i++) {
+	if (arr[i][0] == 3 || arr[i][0] == 7) {
+		console.log(arr[i]);
+	};
+};
+
+
+
