@@ -3,22 +3,24 @@ let shopName = prompt("Название вашего магазина", "FunnySh
 let time = 19;
 
 let mainList = {
-    monthBudget,
-    shopName,
+    monthBudget: monthBudget,
+    shopName: shopName,
     shopGoods: [],
     employers: {},
-    open
-}
+    open: false
+};
 
 for (let i = 0; i < 5; i++) {
+
     let a = prompt("Какой тип товаров будем продавать?");
-    if (((typeof(a)) === 'string'  ||  (typeof(a)) === null) && a != '' && a.length < 50) {
+    
+    if ((typeof(a)) === 'string' && a != '' && a.length < 50) {
         console.log('All is okey');
         mainList.shopGoods[i] = a;
-    } else {
+    }  else {
         console.log('Пожалуйста, введи данные в строчно-буквенном формате');
     }
-};
+}
 
 // let i = 0;
 // while (i < 5) {
@@ -47,7 +49,7 @@ if (time < 0) {
         console.log('Its too late');
         } else {
             console.log('There are only 24 hours in a day!');
-        };
+        }
 
 console.log(mainList);
 
