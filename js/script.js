@@ -94,9 +94,9 @@ function dayBudget () {
 
 
 function employers () {
-        for (let i = 0; i < 4; i++) {
+        for (let i = 1; i < 5; i++) {
             let empName =  prompt('Введите имя сотрудника');
-            mainList.employers[i + 1] = empName;
+            mainList.employers[i] = i + ' - ' +empName;
         }
     console.log(mainList);
 }
