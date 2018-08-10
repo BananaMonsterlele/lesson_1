@@ -14,7 +14,7 @@ function start () {
     time = 19; 
 }
 
-start();
+// start();
 
 let mainList = {
     monthBudget: monthBudget,
@@ -39,7 +39,7 @@ function chooseGoods() {
     }
 }
 
-chooseGoods();
+// chooseGoods();
 
 // let i = 0;
 // while (i < 5) {
@@ -70,7 +70,7 @@ function workTime(time) {
                 console.log('There are only 24 hours in a day!');
             }
 }        
-workTime(18);
+// workTime(18);
 
 
 function discountSystem (discount) {
@@ -82,7 +82,7 @@ function discountSystem (discount) {
     }
 }
 
-discountSystem(true);
+// discountSystem(true);
 
 console.log(mainList);
 
@@ -90,20 +90,14 @@ function dayBudget () {
     alert("Дневной бюджет составляет " + monthBudget/30);
 }
 
-dayBudget();
+// dayBudget();
 
 
 function employers () {
-        let nameOne = prompt('Введите имя первого сотрудника');
-        let nameTwo = prompt('Введите имя второго сотрудника');
-        let nameThree = prompt('Введите имя третьего сотрудника');
-        let nameFour = prompt('Введите имя четвертого сотрудника');
-        mainList.employers = {
-            1: nameOne,
-            2: nameTwo,
-            3: nameThree,
-            4: nameFour
-        };
-    console.log(mainList.employers);
+        for (let i = 0; i < 4; i++) {
+            let empName =  prompt('Введите имя сотрудника');
+            mainList.employers[i + 1] = empName;
+        }
+    console.log(mainList);
 }
 employers();
