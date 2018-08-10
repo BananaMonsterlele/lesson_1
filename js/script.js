@@ -1,7 +1,7 @@
 let monthBudget,
     shopName,
     time,
-    price;   
+    price = 8000;   
 
 function start () {
     monthBudget = prompt("Ваш бюджет на месяц", "50000");
@@ -77,7 +77,9 @@ function discountSystem (discount) {
     if (discount == true) {
         price = price * 0.8;
         console.log(price);
-    } 
+    } else {
+        console.log(price);
+    }
 }
 
 discountSystem(true);
