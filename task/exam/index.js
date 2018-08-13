@@ -1,23 +1,13 @@
-let numbers = [];
-
 
 function isInteger(num) {
   return (num ^ 0) === num;
 }
-// module.exports = {
-//     firstName: 'Name',
-//     secondName: 'Surname',
-//     task: getFriendlyNumbers
-// }
 
-
-function isFriendly (num1, num2) {
-	let sum1 = getDivisorsSum(num1);
-	let sum2 = getDivisorsSum(num2);
-
-	return sum1 == num2 && sum2 == num1;
+module.exports = {
+    firstName: 'Name',
+    secondName: 'Surname',
+    task: getFriendlyNumbers
 }
-// alert(isFriendly(220,284));
 
 function getDivisorsSum (num) {
 	return getSum(getDivisors(num));
@@ -43,20 +33,29 @@ function getSum (arr) {
 	return sum;
 }
 
+function isFriendly (num1, num2) {
+	let sum1 = getDivisorsSum(num1);
+	let sum2 = getDivisorsSum(num2);
+
+	return sum1 == num2 && sum2 == num1;
+}
+
 function getFriendlyNumbers(start, end) {
-	for (let i = start; i <= end; ++i) {
-		if(start < end && typeof(start) == 'number' && typeof(end) == 'number' && start > 0 && end > 0 && isInteger(start) == true && isInteger(end) == true) {
+	let numbers = [];
+	if(start <= end && typeof(start) == 'number' && typeof(end) == 'number' && start > 0 && end > 0 && isInteger(start) == true && isInteger(end) == true) {
+		for (let i = start; i < end; ++i) {
 			for (let y = i + 1; y <= end; y++){
 				if (isFriendly(i,y) == true) {
-					console.log(true);
-				} else {
-					console.log('В следующий раз');
+					numbers.push([i,y]);		
+				} else if(numbers == []) {
+					return numbers
 				}
 			}
-		} else {
-			return false;
 		}
+		return numbers;
+	} else {
+		return false;
 	}	
-
-}
-console.log(getFriendlyNumbers(1,300));
+}	
+/*
+console.log(getFriendlyNumbers(284,500));*/
