@@ -3,22 +3,19 @@ let monthBudget,
     time,
     price = 8000;   
 
-function start () {
-    monthBudget = prompt("Ваш бюджет на месяц", "50000");
-
-    while(isNaN(monthBudget) ||  monthBudget == '' || monthBudget == null) {
-        monthBudget = prompt("Ваш бюджет на месяц", "50000");
-   }
-
-    shopName = prompt("Название вашего магазина", "FunnyShop").toUpperCase();    
-    time = 19; 
-}
-
-// start();
 
 let mainList = {
-    monthBudget: monthBudget,
-    shopName: shopName,
+    monthBudget: function monthBudget () {
+            monthBudget = prompt("Ваш бюджет на месяц", "50000");
+
+            while(isNaN(monthBudget) ||  monthBudget == '' || monthBudget == null) {
+                monthBudget = prompt("Ваш бюджет на месяц", "50000");
+           };
+        },
+    shopName: function shopName(){
+            shopName = prompt("Название вашего магазина", "FunnyShop").toUpperCase();    
+            time = 19; 
+        },
     shopGoods: [],
     employers: {},
     open: false,
@@ -57,7 +54,7 @@ let mainList = {
     dayBudget: function dayBudget () {
             alert("Дневной бюджет составляет " + monthBudget/30);
         },        
-    employers: function employers () {
+    employers: function getEmployers () {
                 for (let i = 1; i < 5; i++) {
                     let empName =  prompt('Введите имя сотрудника','');
                     mainList.employers[i] = i + ' - ' +empName;
@@ -102,4 +99,4 @@ console.log(mainList);
 
 
 
-// employers();
+// getEmployers();
