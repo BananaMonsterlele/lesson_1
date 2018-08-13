@@ -9,4 +9,22 @@ let lastStage = (''+ grade).split('');
 
 alert(lastStage[0] + lastStage[1]);
 
+// let i = 0;
+// while (i < 5) {
+//     let a = prompt("Какой тип товаров будем продавать?");
+//     if ((typeof(a)) === 'string'  &&  (typeof(a)) === null && a != '' && a.length < 50) {
+//         console.log('All is okey');
+//         mainList.shopGoods[i] = a;
+//     }
+//     i++;
+// };
+
+// do {
+//     let a = prompt("Какой тип товаров будем продавать?");
+//     if ((typeof(a)) === 'string'  &&  (typeof(a)) === null && a != '' && a.length < 50) {
+//         console.log('All is okey');
+//         mainList.shopGoods[i] = a;
+//     }
+//     i++;
+// } while(i < 5);
 
