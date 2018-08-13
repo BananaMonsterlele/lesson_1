@@ -48,7 +48,7 @@ function getFriendlyNumbers(start, end) {
 				if (isFriendly(i,y) == true) {
 					numbers.push([i,y]);		
 				} else if(numbers == []) {
-					return numbers
+					return numbers;
 				}
 			}
 		}
